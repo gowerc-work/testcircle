@@ -9,8 +9,8 @@ jobs:
 
       - run:
           name: Greeting
-          command: echo Hello, world.
+          command: echo Hello, world. > test.txt
 
       - run:
           name: Print the Current Time
-          command: date
+          command: cat test.txt
