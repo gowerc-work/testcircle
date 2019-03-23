@@ -6,7 +6,7 @@ test_that( "something", {
 
     #print("hello, world")
 
-    #helloword()
+    helloword()
     #stop("it went wrong")
 
     #warning("Itis a warnings")

@@ -12,7 +12,7 @@ helloword <- function(...){
     x <- 1
     x <- 1
     x <- 1
-    warning("heloo)")
+    #warning("heloo)")
     x <- 1
     return(x)
 }
