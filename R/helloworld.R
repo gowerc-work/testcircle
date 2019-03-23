@@ -4,6 +4,9 @@
 #'
 helloword <- function(...){
     print("hello world")
+    x <- 1
+    x <- 1
+    x <- 1
 }
 
 
