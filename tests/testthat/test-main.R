@@ -9,6 +9,7 @@ test_that( "something", {
     helloword()
     #stop("it went wrong")
 
+
     #warning("Itis a warnings")
 })
 

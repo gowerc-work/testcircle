@@ -2,11 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: rocker/tidyverse:latest
+      - image: rocker/r-base:latest
 
     steps:
       - checkout
       
+      - run:
+          name: Build Dependencies 
+          command: | 
+              Rscript -e 'install.packages("devtools") ; if ( !all( "devtools" %in% installed.packages())) { q(status = 1 , save = "no")}' 
+              Rscript -e 'deps <- devtools::dev_package_deps(dependencies = NA);devtools::install_deps(dependencies = TRUE);if (!all(deps$package %in% installed.packages())) { message("missing: ", paste(setdiff(deps$package, installed.packages()), collapse=", ")); q(status = 1, save = "no")}'
+
       - run:
           name: Runs tests / checks
           command: Rscript -e "devtools::check()"
