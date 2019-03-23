@@ -1,4 +1,6 @@
 
 
 print("hello, world")
-stop("it went wrong")
+
+helloword()
+#stop("it went wrong")

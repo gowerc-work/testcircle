@@ -6,11 +6,11 @@ jobs:
 
     steps:
       - checkout
-
+      
       - run:
-          name: Greeting
-          command: echo Hello, world. > test.txt
-
-      - run:
-          name: Print the Current Time
+          name: Runs tests / checks
           command: Rscript -e "devtools::check()"
+          
+      - run:
+          name: Code Coverage
+          command: Rscript -e "covr::codecov()"
