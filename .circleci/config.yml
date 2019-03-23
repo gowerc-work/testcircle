@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: rocker/tidyverse:latest
 
     steps:
       - checkout
@@ -13,4 +13,4 @@ jobs:
 
       - run:
           name: Print the Current Time
-          command: cat test.txt
+          command: Rscript -e "devtools::check()"
