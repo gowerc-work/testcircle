@@ -2,3 +2,4 @@
 ^testcircle\.Rproj$
 ^\.Rproj\.user$
 ^.circleci/
+^codecov\.yml$
