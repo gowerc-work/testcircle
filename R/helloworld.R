@@ -4,6 +4,9 @@
 #'
 helloword <- function(...){
     print("hello world")
+    x <- 1
+    x <- 1
+    x <- 1
 }
 
 
@@ -18,3 +21,5 @@ helloword2 <- function(){
     h <- mean(x,y,z)
     return(h)
 }
+
+
