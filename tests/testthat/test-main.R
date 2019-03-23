@@ -1,6 +1,15 @@
+context("Name of test context")
 
 
-print("hello, world")
+test_that( "something", {
+    expect_equal(1,1)
 
-helloword()
-#stop("it went wrong")
+    #print("hello, world")
+
+    helloword()
+    #stop("it went wrong")
+
+    #warning("Itis a warnings")
+})
+
+

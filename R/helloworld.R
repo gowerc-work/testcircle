@@ -1,12 +1,20 @@
 #' helloworld
 #'
 #' @param ... does nothing
-#'
+#' @import stringr
+#' @import glue
 helloword <- function(...){
-    print("hello world")
+    #print("hello world")
     x <- 1
     x <- 1
     x <- 1
+    x <- 1
+    x <- 1
+    x <- 1
+    x <- 1
+    #warning("heloo)")
+    x <- 1
+    return(x)
 }
 
 
@@ -16,8 +24,10 @@ helloword <- function(...){
 helloword2 <- function(){
     print("hello world")
     x <- 1
+    x <- 1
+    x <- 1
     y <- 2
-    z < x + y
+    z <- x + y
     h <- mean(x,y,z)
     return(h)
 }
