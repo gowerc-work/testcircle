@@ -1,0 +1,13 @@
+Package: testcircle
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Authors@R: c( 
+    person("Craig" ,"Gower" , email = "craig.gower@roche.com" , role = c("cre","aut"))
+    )
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1

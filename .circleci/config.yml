@@ -2,15 +2,15 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: rocker/tidyverse:latest
 
     steps:
       - checkout
-
+      
       - run:
-          name: Greeting
-          command: echo Hello, world. > test.txt
-
+          name: Runs tests / checks
+          command: Rscript -e "devtools::check()"
+          
       - run:
-          name: Print the Current Time
-          command: cat test.txt
+          name: Code Coverage
+          command: Rscript -e "covr::codecov()"

@@ -1,0 +1,4 @@
+^LICENSE\.md$
+^testcircle\.Rproj$
+^\.Rproj\.user$
+^.circleci/
