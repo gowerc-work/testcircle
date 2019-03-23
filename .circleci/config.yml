@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: rocker/tidyverse:latest
 
     steps:
       - checkout
@@ -14,3 +14,15 @@ jobs:
       - run:
           name: Print the Current Time
           command: cat test.txt
+          
+      - run:
+          name: view directory contents
+          command: ls * 
+          
+      - run:
+          name: test R
+          command: Rscript -e "print('hello, world')"
+          
+      - run:
+          name: cause an error
+          command: apodpoawd
