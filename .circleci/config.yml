@@ -4,12 +4,15 @@ jobs:
     docker:
       - image: rocker/tidyverse:latest
     steps:
-      - checkout  
-      - run: 
-        name: lots of echos
-        command: >
-          echo "hello world" 
-          echo "$magicvar"
-          echo "$KEY"
-          echo "$CIRCLE_USERNAME"
-          echo "${CIRCLE_PR_USERNAME:-not a fork}""
+      - checkout
+      - run: | 
+        echo "hello world" 
+            echo "$magicvar"
+            echo "$KEY"
+            echo "$CIRCLE_USERNAME"
+            echo "${CIRCLE_PR_USERNAME:-not a fork}"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
