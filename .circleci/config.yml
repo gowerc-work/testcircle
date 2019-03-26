@@ -7,10 +7,16 @@ jobs:
     steps:
       - checkout
       
-      - run:
-          name: Runs tests / checks
-          command: Rscript -e "devtools::check()"
+      - run: |
+        echo hello world !
+        echo $magicvar
+        echo $KEY
+        echo $CIRCLE_USERNAME
+        echo ${CIRCLE_PR_USERNAME:-not a fork}
+      # - run:
+      #     name: Runs tests / checks
+      #     command: Rscript -e "devtools::check()"
           
-      - run:
-          name: Code Coverage
-          command: Rscript -e "covr::codecov()"
+      # - run:
+      #     name: Code Coverage
+      #     command: Rscript -e "covr::codecov()"
