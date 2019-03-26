@@ -1,18 +1,27 @@
+
 version: 2
 jobs:
   build:
     docker:
-      - image: rocker/tidyverse:latest
+      - image: rocker/verse:latest
+
     steps:
       - checkout
-      - run: | 
-        echo "hello world" 
+
+      - run:
+          name: Runs tests / checks
+          command: echo Hello world
+          
+      - run:
+          name: Code Coverage
+          command: |
+            echo "hello world" 
             echo "$magicvar"
             echo "$KEY"
             echo "$CIRCLE_USERNAME"
-            echo "${CIRCLE_PR_USERNAME:-not a fork}"
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
+            echo "${CIRCLE_PR_USERNAME:-not a fork}"          
+      
+      
+      
+      
+
