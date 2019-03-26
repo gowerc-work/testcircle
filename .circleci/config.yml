@@ -7,7 +7,7 @@ jobs:
       - checkout  
       - run: 
         name: lots of echos
-        command: |
+        command: >
           echo "hello world" 
           echo "$magicvar"
           echo "$KEY"
