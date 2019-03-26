@@ -7,12 +7,14 @@ jobs:
     
       - checkout  
       
-      - run: |
-        echo hello world !
-        echo $magicvar
-        echo $KEY
-        echo $CIRCLE_USERNAME
-        echo ${CIRCLE_PR_USERNAME:-not a fork}
+      - run: 
+        name: lots of echos
+        command: |
+          echo hello world !
+          echo $magicvar
+          echo $KEY
+          echo $CIRCLE_USERNAME
+          echo ${CIRCLE_PR_USERNAME:-not a fork}
         
       # - run:
       #     name: Runs tests / checks
