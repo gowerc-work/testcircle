@@ -3,9 +3,9 @@ jobs:
   build:
     docker:
       - image: rocker/tidyverse:latest
-
     steps:
-      - checkout
+    
+      - checkout  
       
       - run: |
         echo hello world !
@@ -13,6 +13,7 @@ jobs:
         echo $KEY
         echo $CIRCLE_USERNAME
         echo ${CIRCLE_PR_USERNAME:-not a fork}
+        
       # - run:
       #     name: Runs tests / checks
       #     command: Rscript -e "devtools::check()"
